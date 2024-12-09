@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body class="bg-gray-100 p-6 ">
+    <!-- Main Container -->
+    <div id="app" class="max-w-7xl mx-auto bg-white rounded-xl shadow-md p-6">
+      <!-- Header -->
+      <header class="flex justify-between items-center mb-8">
+        <h1 class="text-2xl font-bold text-gray-800">cexito</h1>
+        <div class="flex space-x-10">
+          <button class="text-gray-700 hover:text-black hover:bg-yellow-400 p-2 rounded-full">Dashboard</button>
+          <button class="text-gray-700 hover:text-black hover:bg-yellow-400 p-2 rounded-full">People</button>
+          <button class="text-gray-700 hover:text-black hover:bg-yellow-400 p-2 rounded-full">Settings</button>
+        </div>
+      </header>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-3 gap-6 mb-8">
+        <div>
+          <p class="text-sm text-gray-600">Interviews</p>
+          <div class="text-lg font-bold">25%</div>
+        </div>
+        <div>
+          <p class="text-sm text-gray-600">Hired</p>
+          <div class="w-full bg-gray-200 rounded-full h-2.5">
+            <div
+              class="bg-yellow-400 h-2.5 rounded-full"
+              style="width: 80%"
+            ></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm text-gray-600">Project Time</p>
+          <div class="w-full bg-gray-200 rounded-full h-2.5">
+            <div
+              class="bg-gray-400 h-2.5 rounded-full"
+              style="width: 54%"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="flex justify-between items-center mb-6">
+        <div class="flex space-x-2">
+          <button class="bg-gray-200 px-4 py-2 rounded-md text-sm font-medium">
+            Columns
+          </button>
+          <button class="bg-gray-200 px-4 py-2 rounded-md text-sm font-medium">
+            Department
+          </button>
+          <button class="bg-gray-200 px-4 py-2 rounded-md text-sm font-medium">
+            Site
+          </button>
+          <button class="bg-gray-200 px-4 py-2 rounded-md text-sm font-medium">
+            Lifecycle
+          </button>
+        </div>
+        <input
+          id="search"
+          type="text"
+          placeholder="Search"
+          class="border border-gray-300 rounded-lg px-4 py-2 text-sm"
+        />
+      </div>
+
+      <!-- Table -->
+      <table class="w-full text-left border-collapse">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="p-4">Name</th>
+            <th class="p-4">Job Title</th>
+            <th class="p-4">Department</th>
+            <th class="p-4">Salary</th>
+            <th class="p-4">Start Date</th>
+            <th class="p-4">Lifecycle</th>
+            <th class="p-4">Status</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- Rows will be dynamically injected here -->
+        </tbody>
+      </table>
+
+      <!-- Footer -->
+      <footer class="mt-8 text-sm text-gray-600 text-center"></footer>
+    </div>
+  </body>
+</html>
